@@ -1,0 +1,87 @@
+// CUSTOM
+
+// Force management section boxes/columns to be the same height
+// See http://stackoverflow.com/questions/8740779/how-to-build-a-2-column-fixed-fluid-layout-with-twitter-bootstrap
+.fill { 
+  min-height: 100%;
+}
+
+// Management pill box
+.box {
+  background-color: @grayLighter;
+  .border-radius(25px);
+  margin-bottom: 10px;
+}
+
+// Management image
+.box > img {
+  max-width: 75%;
+  padding: 4px 4px 4px 25px;
+}
+
+// Management title
+.box-title {
+  background-color: darken(@white, 20%);
+  .border-radius(0px);
+  padding: 4px 10px 4px;
+  margin-bottom: 0px;
+}
+
+// Management bio
+.box-text {
+  background-color: darken(@white, 10%);
+  .border-radius(0px 0px 25px 25px);
+  padding: 4px 10px 4px;
+  margin-bottom: 0px;
+}
+
+// Contact us button position
+.align-right {
+  text-align: right;
+}
+
+// What we do
+.well-feature {
+  background-color: @gray;
+  font-size: 18px;
+  color: @white;
+  text-align: center;
+  font-weight: bold;
+}
+
+// Contact us button position
+button {
+  float:right;
+}
+
+// Padding below each section
+section {
+  margin-bottom: 40px;
+}
+
+// Pushes section headers below fixed nav
+// See http://nicolasgallagher.com/jump-links-and-viewport-positioning/
+section:before {
+   content: '';
+   display: block;
+   height: 50px;
+   margin: -30px 0 0;
+}
+
+// Additional navbar items (e.g., LinkedIn)
+.navbar-btn {
+  float: none;
+  // Vertically center the text given @navbarHeight
+  @elementHeight: 20px;
+  padding: ((@navbarHeight - @elementHeight) / 2 - 1) 10px ((@navbarHeight - @elementHeight) / 2 + 1);
+}
+
+// Client pill box
+.box-border-only {
+  border-style: solid;
+  border-width: 1px;
+  border-color: @grayLighter;
+  .border-radius(5px);
+  text-align: center;
+  margin-bottom: 10px;
+}
