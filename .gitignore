@@ -34,3 +34,6 @@ nbproject
 .CVS
 .idea
 node_modules
+
+# Spartan modification: don't track generated file
+docs/assets/css/bootstrap.css
