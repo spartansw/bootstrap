@@ -29,6 +29,12 @@ body {
       width: @brandImgWidth;
     }
   }
+  .nav > li > a {
+    @fontSize: 18px;
+    @paddingTop: @brandImgHeight + 2*@brandPaddingHeight - @fontSize;
+    font-size: @fontSize;
+    padding: @paddingTop 10px 0;
+  }
 }
 
 // Force management section boxes/columns to be the same height
