@@ -4,10 +4,31 @@
 @navbarBackground:                #143b5c;
 @navbarBackgroundHighlight:       #143b5c;
 
+@navbarHeight:                    120px;
+
+@brandImgWidth:                   256px;
+@brandImgHeight:                  78px;
+@brandPaddingHeight:              10px;
+
 body {
   font-family: "proxima-nova";
   // this should be in sync with the data-offset parameter
   padding-top: @navbarHeight + 20px;
+}
+
+.navbar {
+  .brand {
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: #0186c7;
+    padding: @brandPaddingHeight 5px;
+    .border-radius(0 0 10px 10px);
+    .box-shadow(0 0 8px @black);
+    > img {
+      height: @brandImgHeight;
+      width: @brandImgWidth;
+    }
+  }
 }
 
 // Force management section boxes/columns to be the same height
