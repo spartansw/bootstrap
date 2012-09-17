@@ -13,7 +13,6 @@
 
 @brandImgWidth:                   280px;
 @brandImgHeight:                  82px;
-@brandPaddingHeight:              0px;
 
 body {
   font-family: "proxima-nova";
@@ -25,7 +24,7 @@ body {
   .brand {
     margin-left: 40px;
     margin-right: 40px;
-    padding: @brandPaddingHeight 0px;
+    padding: 0 0px;
     > img {
       height: @brandImgHeight;
       width: @brandImgWidth;
@@ -35,7 +34,7 @@ body {
   }
   .nav > li > a {
     @fontSize: 18px;
-    @paddingTop: @brandImgHeight + 2*@brandPaddingHeight - @fontSize;
+    @paddingTop: @brandImgHeight + @fontSize;
     font-size: @fontSize;
     padding: @paddingTop 10px 0;
   }
