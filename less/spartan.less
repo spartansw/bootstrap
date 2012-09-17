@@ -61,6 +61,20 @@ body {
 h2 {
   font-size: 36px;
   padding: 0 100px;
+
+  &:after {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 400px;
+    margin: 10px 0 20px -100px;
+    background: #003f8c;
+    background-image: -webkit-gradient(
+      linear, 0 0, 100% 0,
+      from(@bodyBackground), to(@bodyBackground),
+      color-stop(50%, #003f8c),
+    );
+  }
 }
 
 // Force management section boxes/columns to be the same height
