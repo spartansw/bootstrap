@@ -9,10 +9,13 @@
 @navbarBackgroundHighlight:       #0287c8;
 @navbarLinkColor:                 @white;
 
-@navbarHeight:                    135px;
+@navbarHeight:                    100px;
 
 @brandImgWidth:                   280px;
 @brandImgHeight:                  82px;
+
+@taglineFontSize:                 36px;
+@navFontSize:                     18px;
 
 body {
   font-family: "proxima-nova";
@@ -33,16 +36,15 @@ body {
     }
   }
   .nav > li > a {
-    @fontSize: 18px;
-    @paddingTop: @brandImgHeight + @fontSize;
-    font-size: @fontSize;
+    @paddingTop: @brandImgHeight - @taglineFontSize - @navFontSize;
+    font-size: @navFontSize;
     padding: @paddingTop 10px 0;
   }
   .tagline {
     float: right;
     text-align: right;
-    font-size: @navbarHeight / 3;
-    line-height: @navbarHeight / 3;
+    font-size: @taglineFontSize;
+    line-height: @taglineFontSize;
     font-weight: bold;
     .opacity(25);
     text-transform: uppercase;
