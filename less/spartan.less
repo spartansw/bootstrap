@@ -1,12 +1,16 @@
 // CUSTOM
 
+@spartanBlue:                     #0287c8;
+@spartanBluer:                    #1b5279;
+@spartanLessBlue:                 #4bb2ec;
+
 @bodyBackground:                  #0186c7;
 @textColor:                       @white;
 @headingsFontWeight:              normal;
 
 // TODO navbar background should be a pattern
-@navbarBackground:                #0287c8;
-@navbarBackgroundHighlight:       #0287c8;
+@navbarBackground:                @spartanBlue;
+@navbarBackgroundHighlight:       @spartanBlue;
 @navbarLinkColor:                 @white;
 
 @navbarHeight:                    100px;
@@ -32,7 +36,7 @@ body {
       height: @brandImgHeight;
       width: @brandImgWidth;
       .border-radius(0 0 10px 10px);
-      .box-shadow(3px 3px 6px 3px #1b5279);
+      .box-shadow(3px 3px 6px 3px @spartanBluer);
     }
   }
   .nav > li > a {
@@ -46,7 +50,7 @@ body {
     font-size: @taglineFontSize;
     line-height: @taglineFontSize;
     font-weight: bold;
-    text-shadow: -1px -1px 1px #4bb2ec, 1px 1px 1px #1b5279;
+    text-shadow: -1px -1px 1px @spartanLessBlue, 1px 1px 1px @spartanBluer;
     text-transform: uppercase;
   }
 }
