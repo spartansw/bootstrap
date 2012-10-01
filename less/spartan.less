@@ -13,6 +13,8 @@
 @navbarLinkColor:                 @white;
 
 @navbarHeight:                    100px;
+// this should be in sync with the data-offset parameter
+@bodyTopPadding:                  @navbarHeight + 20px;
 
 @brandImgWidth:                   280px;
 @brandImgHeight:                  82px;
@@ -22,8 +24,7 @@
 
 body {
   font-family: "proxima-nova";
-  // this should be in sync with the data-offset parameter
-  padding-top: @navbarHeight + 20px;
+  padding-top: @bodyTopPadding;
   background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.5)), url("../img/background.png");
   > .container {
     background-color: @bodyBackground;
@@ -130,8 +131,8 @@ section {
 section:before {
    content: '';
    display: block;
-   height: @navbarHeight + 20px;
-   margin: -(@navbarHeight + 20px) 0 0;
+   height: @bodyTopPadding;
+   margin: -@bodyTopPadding 0 0;
 }
 
 // Client pill box
