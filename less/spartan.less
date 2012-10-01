@@ -72,6 +72,27 @@ h2 {
   background-image: url("../img/section_header_bg.png");
 }
 
+.carousel {
+  @imgWidthMax: 711px;
+  @imgHeightMax: 483px;
+  @captionHeight: 10px + 14px + 3 * @baseFontSize + 5px;
+  width: @imgWidthMax;
+  height: @imgHeightMax + @bodyTopPadding + @captionHeight;
+  margin: auto;
+  .item {
+    height:  @imgHeightMax + @captionHeight;
+    img {
+      margin: auto;
+    }
+    .carousel-caption {
+      background: @white;
+      h4, p {
+        color: @textColor;
+      }
+    }
+  }
+}
+
 // Force management section boxes/columns to be the same height
 // See http://stackoverflow.com/questions/8740779/how-to-build-a-2-column-fixed-fluid-layout-with-twitter-bootstrap
 .fill { 
@@ -128,7 +149,7 @@ section {
 
 // Pushes section headers below fixed nav
 // See http://nicolasgallagher.com/jump-links-and-viewport-positioning/
-section:before {
+section:before, #heroCarousel:before {
    content: '';
    display: block;
    height: @bodyTopPadding;
