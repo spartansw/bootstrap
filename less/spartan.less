@@ -59,22 +59,16 @@ body {
 }
 
 h2 {
+  @backgroundWidth: 323px;
+  @backgroundHeight: 52px;
+  @fontSize: 36px;
+  @leftPadding: 50px;
+  @vertPadding: (@backgroundHeight - @fontSize) / 2;
   font-size: 36px;
-  padding: 0 100px;
-
-  &:after {
-    content: "";
-    display: block;
-    height: 2px;
-    width: 400px;
-    margin: 10px 0 20px -100px;
-    background: #003f8c;
-    background-image: -webkit-gradient(
-      linear, 0 0, 100% 0,
-      from(@bodyBackground), to(@bodyBackground),
-      color-stop(50%, #003f8c),
-    );
-  }
+  margin: 20px 0;
+  padding: @vertPadding 0 @vertPadding 50px;
+  width: @backgroundWidth - @leftPadding;
+  background-image: url("../img/section_header_bg.png");
 }
 
 // Force management section boxes/columns to be the same height
