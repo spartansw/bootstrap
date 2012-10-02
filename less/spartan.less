@@ -76,7 +76,7 @@ h2 {
   @imgHeightMax: 483px;
   @captionHeight: 10px + 14px + 3 * @baseFontSize + 5px;
   width: @imgWidthMax;
-  height: @imgHeightMax + @navbarHeight + @captionHeight;
+  height: @imgHeightMax + @captionHeight;
   margin: auto;
   .item {
     height:  @imgHeightMax + @captionHeight;
@@ -152,15 +152,6 @@ section {
   margin-bottom: 40px;
 }
 
-// Pushes section headers below fixed nav
-// See http://nicolasgallagher.com/jump-links-and-viewport-positioning/
-section:before, #heroCarousel:before {
-   content: '';
-   display: block;
-   height: @navbarHeight;
-   margin: -@navbarHeight 0 0;
-}
-
 // Client pill box
 .box-border-only {
   border-style: solid;
@@ -169,4 +160,9 @@ section:before, #heroCarousel:before {
   .border-radius(5px);
   text-align: center;
   margin-bottom: 10px;
+}
+
+.target {
+  position: relative;
+  top: -@navbarHeight;
 }
