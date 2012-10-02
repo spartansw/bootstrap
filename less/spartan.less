@@ -147,9 +147,21 @@ h2 {
   font-weight: bold;
 }
 
-// Padding below each section
 section {
-  margin-bottom: 40px;
+  // make the section box contain the h2 box (which has a top margin),
+  // otherwise the background gradient starts after the h2 top margin
+  // http://stackoverflow.com/questions/1394724/css-margin-top-when-parents-got-no-border
+  overflow: auto;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-color: #b7b7b7;
+  border-width: 2px 0 0 0;
+  margin-top: -2px;
+  background-image: -webkit-linear-gradient(top, #f6f6f6, @white 100px);
+  &#_recent {
+    border-width: 0;
+    margin-top: 0;
+  }
 }
 
 // Client pill box
