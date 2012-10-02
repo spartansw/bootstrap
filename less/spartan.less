@@ -12,9 +12,8 @@
 @navbarBackgroundHighlight:       @spartanBlue;
 @navbarLinkColor:                 @white;
 
-@navbarHeight:                    100px;
 // this should be in sync with the data-offset parameter
-@bodyTopPadding:                  @navbarHeight + 20px;
+@navbarHeight:                    100px;
 
 @brandImgWidth:                   280px;
 @brandImgHeight:                  82px;
@@ -24,7 +23,7 @@
 
 body {
   font-family: "proxima-nova";
-  padding-top: @bodyTopPadding;
+  padding-top: @navbarHeight + 20px;
   background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.5)), url("../img/background.png");
   > .container {
     background-color: @bodyBackground;
@@ -77,7 +76,7 @@ h2 {
   @imgHeightMax: 483px;
   @captionHeight: 10px + 14px + 3 * @baseFontSize + 5px;
   width: @imgWidthMax;
-  height: @imgHeightMax + @bodyTopPadding + @captionHeight;
+  height: @imgHeightMax + @navbarHeight + @captionHeight;
   margin: auto;
   .item {
     height:  @imgHeightMax + @captionHeight;
@@ -158,8 +157,8 @@ section {
 section:before, #heroCarousel:before {
    content: '';
    display: block;
-   height: @bodyTopPadding;
-   margin: -@bodyTopPadding 0 0;
+   height: @navbarHeight;
+   margin: -@navbarHeight 0 0;
 }
 
 // Client pill box
