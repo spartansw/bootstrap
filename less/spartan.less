@@ -9,6 +9,7 @@
 @navbarBackground:                @spartanBlue;
 @navbarBackgroundHighlight:       @spartanBlue;
 @navbarLinkColor:                 #eaf4f9;
+@navbarLinkColorHover:            #eaf4f9;
 
 // these are local
 
@@ -48,11 +49,19 @@ body {
       .box-shadow(3px 3px 6px 3px @spartanBluer);
     }
   }
-  .nav > li > a {
-    @paddingTop: @brandImgHeight - @taglineFontSize - @navFontSize;
-    font-size: @navFontSize;
-    font-weight: 600;
-    padding: @paddingTop 10px 0;
+  .nav {
+    > li > a {
+      @paddingTop: @brandImgHeight - @taglineFontSize - @navFontSize;
+      font-size: @navFontSize;
+      font-weight: 600;
+      padding: @paddingTop 10px 0;
+      &:hover {
+        font-size: @navFontSize + 1px;
+      }
+    }
+    > .active > a {
+      font-size: @navFontSize + 1px;
+    }
   }
   .tagline {
     color: @navbarBackground;
