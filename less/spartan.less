@@ -1,6 +1,7 @@
 // these override bootstrap variables
 
 @sansFontFamily:                  "proxima-nova-alt";
+@baseFontSize:                    18px;
 @bodyBackground:                  @white;
 @textColor:                       @black;
 
@@ -27,8 +28,8 @@ body {
 .navbar {
   @brandImgWidth:                   280px;
   @brandImgHeight:                  82px;
-  @taglineFontSize:                 36px;
-  @navFontSize:                     18px;
+  @taglineFontSize:                 43px;
+  @navFontSize:                     22px;
 
   > .navbar-inner {
     padding: 0 100px;
@@ -50,6 +51,7 @@ body {
   .nav > li > a {
     @paddingTop: @brandImgHeight - @taglineFontSize - @navFontSize;
     font-size: @navFontSize;
+    font-weight: 600;
     padding: @paddingTop 10px 0;
   }
   .tagline {
@@ -57,7 +59,7 @@ body {
     text-align: right;
     font-size: @taglineFontSize;
     line-height: @taglineFontSize;
-    font-weight: bold;
+    font-weight: 600;
     text-shadow: -1px -1px 1px @spartanLessBlue, 1px 1px 1px @spartanBluer;
     text-transform: uppercase;
   }
@@ -66,17 +68,24 @@ body {
 h2 {
   @backgroundWidth: 323px;
   @backgroundHeight: 52px;
-  @fontSize: 36px;
+  @fontSize: 40px;
   @leftPadding: 50px;
   @vertPadding: (@backgroundHeight - @fontSize) / 2;
   font-size: @fontSize;
+  font-weight: 600;
   margin: 30px 0;
   padding: @vertPadding 0 @vertPadding 50px;
   width: @backgroundWidth - @leftPadding;
   background-image: url("../img/section_header_bg.png");
 }
 
+h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
 .carousel {
+  @captionFontSize: 20px;
   @imgWidthMax: 711px;
   @imgHeightMax: 483px;
   @captionHeight: 45px + 3 * @baseFontSize;  // enough for 3 lines
@@ -92,8 +101,14 @@ h2 {
     }
     .carousel-caption {
       background: @white;
-      h4, p {
+      h4 {
         color: @textColor;
+        font-size: @captionFontSize;
+        font-weight: 600;
+      }
+      p {
+        color: @textColor;
+        font-size: @captionFontSize;
       }
     }
   }
@@ -136,6 +151,10 @@ section {
     border-width: 0;
     margin-top: 0;
   }
+}
+
+.intro {
+  font-weight: 600;
 }
 
 footer {
