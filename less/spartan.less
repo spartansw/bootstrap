@@ -84,15 +84,17 @@ body {
 }
 
 section {
+  @borderWidth: 1px;
+
   // make the section box contain the h2 box (which has a top margin),
   // otherwise the background gradient starts after the h2 top margin
   // http://stackoverflow.com/questions/1394724/css-margin-top-when-parents-got-no-border
   overflow: auto;
   margin-bottom: 10px;
   border-style: solid;
-  border-color: #b7b7b7;
-  border-width: 2px 0 0 0;
-  margin-top: -2px;
+  border-color: #a6a6a6;
+  border-width: @borderWidth 0 0 0;
+  margin-top: -@borderWidth;
   background-image: -webkit-linear-gradient(top, #f8f8f8, @white 100px);
   &#_projects {
     border-width: 0;
