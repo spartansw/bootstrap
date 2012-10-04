@@ -42,16 +42,17 @@
     }
   }
   .nav {
-    > li > a {
-      @paddingTop: @brandImgHeight - @taglineFontSize - @navFontSize;
+    > li {
       font-size: @navFontSize;
       font-weight: 600;
+      @paddingTop: @brandImgHeight - @taglineFontSize - @navFontSize;
       padding: @paddingTop 10px 0;
-    }
-    > li:hover, > li.active {
-      a {
-        font-size: @navFontSize + 1px;
+      > a {
+        padding: 0;
       }
+    }
+    > li a:hover, > li.active > a {
+      font-size: @navFontSize + 1px;
     }
   }
   .tagline {
