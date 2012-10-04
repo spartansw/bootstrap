@@ -37,6 +37,8 @@
     > img {
       height: @brandImgHeight;
       width: @brandImgWidth;
+      // IE 8 max-width element disappearing bug
+      max-width: none;
       .border-radius(0 0 10px 10px);
       .box-shadow(3px 3px 6px 3px @spartanBluer);
     }
