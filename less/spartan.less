@@ -47,12 +47,11 @@
       font-size: @navFontSize;
       font-weight: 600;
       padding: @paddingTop 10px 0;
-      &:hover {
+    }
+    > li:hover, > li.active {
+      a {
         font-size: @navFontSize + 1px;
       }
-    }
-    > .active > a {
-      font-size: @navFontSize + 1px;
     }
   }
   .tagline {
