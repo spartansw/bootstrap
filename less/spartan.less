@@ -17,24 +17,6 @@
 @spartanBluer:                    #1b5279;
 @spartanLessBlue:                 #4bb2ec;
 
-body {
-  padding: @navbarHeight+30px 100px 30px;
-  /* Default background; used for IE alpha gradient trick */
-  background-image: url("../img/background.png");
-  /* Chrome && Safari */
-  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.5)), url("../img/background.png");
-  > .container {
-    width: 100%;
-    background-color: @bodyBackground;
-  }
-  /* Firefox */
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)), url("../img/background.png");
-  /* Opera */
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)), url("../img/background.png");
-  /* IE > 6; uses ARGB format */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#77FFFFFF');
-}
-
 .navbar {
   @brandImgWidth:                   280px;
   @brandImgHeight:                  82px;
@@ -83,6 +65,46 @@ body {
   }
 }
 
+body {
+  padding: @navbarHeight+30px 100px 30px;
+  /* Default background; used for IE alpha gradient trick */
+  background-image: url("../img/background.png");
+  /* Chrome && Safari */
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.5)), url("../img/background.png");
+  > .container {
+    width: 100%;
+    background-color: @bodyBackground;
+  }
+  /* Firefox */
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)), url("../img/background.png");
+  /* Opera */
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.5)), url("../img/background.png");
+  /* IE > 6; uses ARGB format */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#77FFFFFF');
+}
+
+section {
+  // make the section box contain the h2 box (which has a top margin),
+  // otherwise the background gradient starts after the h2 top margin
+  // http://stackoverflow.com/questions/1394724/css-margin-top-when-parents-got-no-border
+  overflow: auto;
+  margin-bottom: 10px;
+  border-style: solid;
+  border-color: #b7b7b7;
+  border-width: 2px 0 0 0;
+  margin-top: -2px;
+  background-image: -webkit-linear-gradient(top, #f8f8f8, @white 100px);
+  &#_projects {
+    border-width: 0;
+    margin-top: 0;
+  }
+}
+
+.target {
+  position: relative;
+  top: -@navbarHeight;
+}
+
 h2 {
   @backgroundWidth: 323px;
   @backgroundHeight: 52px;
@@ -99,6 +121,10 @@ h2 {
 
 h4 {
   font-size: 18px;
+  font-weight: 600;
+}
+
+.intro {
   font-weight: 600;
 }
 
@@ -143,15 +169,19 @@ h4 {
   margin: 20px auto;
 }
 
-#_expertise > .row-fluid, #_about > .row-fluid, #_contact > .row-fluid {
-  width: 90%;
-  margin: 30px auto;
+#_expertise, #_about, #_contact {
+  > .row-fluid {
+    width: 90%;
+    margin: 30px auto;
+  }
 }
 
-#_expertise > p, #_about > p {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
+#_expertise, #_about {
+  > p {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 #_contact {
@@ -170,25 +200,9 @@ h4 {
   }
 }
 
-section {
-  // make the section box contain the h2 box (which has a top margin),
-  // otherwise the background gradient starts after the h2 top margin
-  // http://stackoverflow.com/questions/1394724/css-margin-top-when-parents-got-no-border
-  overflow: auto;
-  margin-bottom: 10px;
-  border-style: solid;
-  border-color: #b7b7b7;
-  border-width: 2px 0 0 0;
-  margin-top: -2px;
-  background-image: -webkit-linear-gradient(top, #f8f8f8, @white 100px);
-  &#_projects {
-    border-width: 0;
-    margin-top: 0;
-  }
-}
-
-.intro {
-  font-weight: 600;
+#map {
+  width: 100%;
+  height: 200px;
 }
 
 footer {
@@ -196,14 +210,4 @@ footer {
   color: white;
   background-image: url("../img/footer_tile.png");
   text-align: center;
-}
-
-.target {
-  position: relative;
-  top: -@navbarHeight;
-}
-
-#map {
-  width: 100%;
-  height: 200px;
 }
