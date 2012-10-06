@@ -25,12 +25,6 @@
   @taglineFontSize:                 43px;
   @navFontSize:                     22px;
 
-  > .navbar-inner {
-    padding: 0 100px;
-    > .container {
-      width: 100%;
-    }
-  }
   .brand {
     margin: 0;
     padding: 0;
@@ -65,13 +59,13 @@
 }
 
 body {
-  padding: @navbarHeight 100px 30px;
+  padding-top: @navbarHeight;
+  padding-bottom: 30px;
   /* Default background; used for IE alpha gradient trick */
   background-image: url("../img/background.png");
   /* Chrome && Safari */
   background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.2)), url("../img/background.png");
   > .container {
-    width: 100%;
     background-color: @bodyBackground;
   }
   /* Firefox */
