@@ -137,7 +137,8 @@ h4 {
   @captionLineHeight: 22px;
   @imgWidthMax: 711px;
   @imgHeightMax: 483px;
-  @captionHeight: 30px + 5 * @captionLineHeight;  // 5 lines
+  @captionLines: 4;
+  @captionHeight: 30px + @captionLines * @captionLineHeight;
   width: @imgWidthMax;
   height: @imgHeightMax + @captionHeight;
   margin-left: auto;
@@ -150,13 +151,6 @@ h4 {
     }
     .carousel-caption {
       background: @white;
-      h4 {
-        display: block;
-        color: @textColor;
-        font-size: @captionFontSize;
-        line-height: @captionLineHeight;
-        font-weight: 600;
-      }
       p {
         color: @textColor;
         font-size: @captionFontSize;
