@@ -10,7 +10,8 @@
 @navbarBackground:                @spartanBlue;
 @navbarBackgroundHighlight:       @spartanBlue;
 @navbarLinkColor:                 #eaf4f9;
-@navbarLinkColorHover:            #eaf4f9;
+@navbarLinkColorHover:            @white;
+@navbarLinkColorActive:           @white;
 
 // these are local
 
@@ -50,9 +51,6 @@
       > a {
         padding: 0;
       }
-    }
-    > li a:hover, > li.active > a {
-      font-size: @navFontSize + 1px;
     }
   }
   .tagline {
