@@ -162,11 +162,18 @@ h4 {
     }
   }
   .carousel-control {
+    @width: 38px;
     top: 30%;
-    width: 38px;
+    width: @width;
     height: 54px;
     background: white;
     .border-radius(0);
+    &.left {
+      left: -(@width + 50px);
+    }
+    &.right {
+      right: -(@width + 50px);
+    }
   }
 }
 
