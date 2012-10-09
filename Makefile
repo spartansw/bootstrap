@@ -95,4 +95,7 @@ spartan: $(SPARTAN_CSS)
 $(SPARTAN_CSS): less/spartan.less less/spartan-variables.less
 	lessc $< > $@.tmp && mv $@.tmp $@
 
+spartan-install: build
+	cp $(BOOTSTRAP) $(BOOTSTRAP_RESPONSIVE) ../spartan-site/assets/css
+
 .PHONY: docs watch gh-pages
