@@ -35,5 +35,6 @@ nbproject
 .idea
 node_modules
 
-# Spartan modification: don't track generated file
+# Spartan modification: don't track generated files
 docs/assets/css/bootstrap.css
+docs/assets/css/bootstrap-responsive.css
