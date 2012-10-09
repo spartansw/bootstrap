@@ -90,5 +90,9 @@ watch:
 	echo "Watching less files..."; \
 	watchr -e "watch('less/.*\.less') { system 'make' }"
 
+SPARTAN_CSS := ../spartan-site/assets/css/spartan.css
+spartan: $(SPARTAN_CSS)
+$(SPARTAN_CSS): less/spartan.less less/spartan-variables.less
+	lessc $< > $@.tmp && mv $@.tmp $@
 
 .PHONY: docs watch gh-pages
