@@ -2,6 +2,8 @@
 @import "mixins.less";
 @import "spartan-variables.less";
 
+@semiBold: 600;
+
 .navbar {
   @brandImgWidth:                   289px;
   @brandImgHeight:                  92px;
@@ -24,7 +26,7 @@
     > li {
       font-size: @navFontSize;
       line-height: @navFontSize;
-      font-weight: 600;
+      font-weight: @semiBold;
       @paddingTop: @brandImgHeight - 10px - @taglineFontSize - @navFontSize;
       padding: @paddingTop 0 0 20px;
       > a {
@@ -37,7 +39,7 @@
     text-align: right;
     font-size: @taglineFontSize;
     line-height: @taglineFontSize;
-    font-weight: 600;
+    font-weight: @semiBold;
     text-shadow: -1px -1px 1px @spartanLessBlue, 1px 1px 1px @spartanBluer;
     text-transform: uppercase;
   }
@@ -100,7 +102,7 @@ h2 {
   @vertPadding: 6px;
   font-size: @fontSize;
   line-height: @fontSize;
-  font-weight: 600;
+  font-weight: @semiBold;
   margin: 10px 0 20px;
   padding: @vertPadding 0 @vertPadding @leftPadding;
   width: @backgroundWidth - @leftPadding;
@@ -114,11 +116,11 @@ h4 {
   display: run-in;
   margin-right: 7px;
   font-size: @baseLineHeight;
-  font-weight: 600;
+  font-weight: @semiBold;
 }
 
 .intro {
-  font-weight: 600;
+  font-weight: @semiBold;
 }
 
 .carousel {
