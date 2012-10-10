@@ -140,18 +140,19 @@ h4 {
   font-weight: @semiBold;
 }
 
+// actually the max after applying the negative margin to move ontram, taus
+@carouselImgWidthMax: 555px;
+@carouselImgHeightMax: 427px;
+@carouselControlWidth: 38px;
 .make-carousel (@captionWidth, @captionY, @captionSpacing, @controlSpacing) {
   .carousel {
-    // actually the max after applying the negative margin to move ontram, taus
-    @imgWidthMax: 555px;
-    @imgHeightMax: 427px;
-    @controlWidth: 38px;
-    width: @imgWidthMax + @captionWidth + @captionSpacing + 2 * @controlWidth + 4 * @controlSpacing;
+    @carouselControlWidth: 38px;
+    width: @carouselImgWidthMax + @captionWidth + @captionSpacing + 2 * @carouselControlWidth + 4 * @controlSpacing;
     margin-left: auto;
     margin-right: auto;
     .item {
       text-align: center;
-      height: @imgHeightMax;
+      height: @carouselImgHeightMax;
       .carousel-caption {
         display: inline-block;
         position: static;
@@ -174,7 +175,7 @@ h4 {
     }
     .carousel-control {
       top: 30%;
-      width: @controlWidth;
+      width: @carouselControlWidth;
       height: 54px;
       background: none;
       background-repeat: no-repeat;
