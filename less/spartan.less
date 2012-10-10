@@ -123,7 +123,7 @@ h4 {
   font-weight: @semiBold;
 }
 
-.carousel (@captionWidth, @captionSpacing, @controlSpacing) {
+.carousel (@captionWidth, @captionY, @captionSpacing, @controlSpacing) {
   .carousel {
     // actually the max after applying the negative margin to move ontram, taus
     @imgWidthMax: 555px;
@@ -140,8 +140,7 @@ h4 {
         position: static;
         width: @captionWidth;
         vertical-align: top;
-        padding: 100px @captionSpacing 0 0;
-        padding-top: 100px;
+        padding: @captionY @captionSpacing 0 0;
         text-align: left;
         background: @white;
         p {
@@ -173,9 +172,9 @@ h4 {
     }
   }
 }
-.carousel(220px, 20px, 15px);
+.carousel(220px, 80px, 20px, 15px);
 @media (min-width: 1200px) {
-  .carousel(250px, 30px, 15px);
+  .carousel(250px, 100px, 30px, 15px);
 }
 
 #_clients > .row-fluid {
