@@ -123,57 +123,57 @@ h4 {
   font-weight: @semiBold;
 }
 
-.carousel {
-  // actually the max after applying the negative margin to move ontram, taus
-  @imgWidthMax: 555px;
-  @imgHeightMax: 427px;
-  @captionWidth: 250px;
-  @captionSpacing: 30px;
-  @controlWidth: 38px;
-  @controlSpacing: 15px;
-  width: @imgWidthMax + @captionWidth + @captionSpacing + 2 * @controlWidth + 4 * @controlSpacing;
-  margin-left: auto;
-  margin-right: auto;
-  .item {
-    text-align: center;
-    height: @imgHeightMax;
-    .carousel-caption {
-      display: inline-block;
-      position: static;
-      width: @captionWidth;
-      vertical-align: top;
-      padding: 100px @captionSpacing 0 0;
-      padding-top: 100px;
-      text-align: left;
-      background: @white;
-      p {
-        color: @textColor;
-        line-height: @baseLineHeight;
+.carousel (@captionWidth, @captionSpacing, @controlSpacing) {
+  .carousel {
+    // actually the max after applying the negative margin to move ontram, taus
+    @imgWidthMax: 555px;
+    @imgHeightMax: 427px;
+    @controlWidth: 38px;
+    width: @imgWidthMax + @captionWidth + @captionSpacing + 2 * @controlWidth + 4 * @controlSpacing;
+    margin-left: auto;
+    margin-right: auto;
+    .item {
+      text-align: center;
+      height: @imgHeightMax;
+      .carousel-caption {
+        display: inline-block;
+        position: static;
+        width: @captionWidth;
+        vertical-align: top;
+        padding: 100px @captionSpacing 0 0;
+        padding-top: 100px;
+        text-align: left;
+        background: @white;
+        p {
+          color: @textColor;
+          line-height: @baseLineHeight;
+        }
+      }
+      img {
+        display: inline;
+        vertical-align: middle;
+        &#carousel-img-ontram, &#carousel-img-taus {
+          margin: 0 -80px;
+        }
       }
     }
-    img {
-      display: inline;
-      vertical-align: middle;
-      &#carousel-img-ontram, &#carousel-img-taus {
-        margin: 0 -80px;
+    .carousel-control {
+      top: 30%;
+      width: @controlWidth;
+      height: 54px;
+      background: none;
+      border: 0;
+      .border-radius(0);
+      &.left {
+        left: @controlSpacing;
       }
-    }
-  }
-  .carousel-control {
-    top: 30%;
-    width: @controlWidth;
-    height: 54px;
-    background: none;
-    border: 0;
-    .border-radius(0);
-    &.left {
-      left: @controlSpacing;
-    }
-    &.right {
-      right: @controlSpacing;
+      &.right {
+        right: @controlSpacing;
+      }
     }
   }
 }
+.carousel(250px, 30px, 15px);
 
 #_clients > .row-fluid {
   width: 80%;
