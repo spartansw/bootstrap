@@ -4,6 +4,24 @@
 
 @semiBold: 600;
 
+body {
+  padding-top: @navbarHeight;
+  padding-bottom: 30px;
+  /* Default background; used for IE alpha gradient trick */
+  background-image: url("../img/background_textured_300x300.png");
+  /* Chrome && Safari */
+  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.2)), url("../img/background_textured_300x300.png");
+  > .container {
+    background-color: @bodyBackground;
+  }
+  /* Firefox */
+  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2)), url("../img/background_textured_300x300.png");
+  /* Opera */
+  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2)), url("../img/background_textured_300x300.png");
+  /* IE > 6; uses ARGB format */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#33FFFFFF');
+}
+
 .make-navbar (@taglineFontSize, @navFontSize)  {
   .navbar {
     @brandImgWidth:                   289px;
@@ -72,24 +90,6 @@
       color: #183958;
     }
   }
-}
-
-body {
-  padding-top: @navbarHeight;
-  padding-bottom: 30px;
-  /* Default background; used for IE alpha gradient trick */
-  background-image: url("../img/background_textured_300x300.png");
-  /* Chrome && Safari */
-  background-image: -webkit-linear-gradient(top, rgba(255,255,255,0), rgba(255,255,255,.2)), url("../img/background_textured_300x300.png");
-  > .container {
-    background-color: @bodyBackground;
-  }
-  /* Firefox */
-  background-image: -moz-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2)), url("../img/background_textured_300x300.png");
-  /* Opera */
-  background-image: -o-linear-gradient(top, rgba(255, 255, 255, 0), rgba(255, 255, 255, .2)), url("../img/background_textured_300x300.png");
-  /* IE > 6; uses ARGB format */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00FFFFFF', endColorstr='#33FFFFFF');
 }
 
 section {
