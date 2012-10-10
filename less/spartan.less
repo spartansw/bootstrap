@@ -83,6 +83,21 @@ body {
   }
   .make-navbar(30px, 18px);
 }
+@media (max-width: 767px) {
+  body {
+    padding-top: 0;
+  }
+  .navbar {
+    position: static;
+    .container {
+      padding: 0 20px;
+      width: auto;
+      .nav-collapse {
+        display: none;
+      }
+    }
+  }
+}
 
 .ie {
   .navbar {
