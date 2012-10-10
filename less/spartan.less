@@ -124,31 +124,31 @@ h4 {
 }
 
 .carousel {
-  @imgWidthMax: 679px;
-  @imgHeightMax: 460px;
-  @captionLines: 4;
-  @captionHeight: 15px + @captionLines * @baseLineHeight;
-  width: @imgWidthMax;
-  height: @imgHeightMax + @captionHeight;
+  @imgWidthMax: 674px;
+  @imgHeightMax: 427px;
+  @captionWidth: 250px;
+  width: @imgWidthMax + @captionWidth + 30px;
   margin-left: auto;
   margin-right: auto;
   .item {
-    height:  @imgHeightMax + @captionHeight;
-    img {
-      margin-left: auto;
-      margin-right: auto;
-      &#carousel-img-taus, &#carousel-img-ontram {
-        position: relative;
-        top: -30px;
-      }
-    }
+    text-align: center;
+    height: @imgHeightMax;
     .carousel-caption {
-      height: @captionHeight;
+      display: inline-block;
+      position: static;
+      width: @captionWidth;
+      vertical-align: top;
+      padding-top: 100px;
+      text-align: left;
       background: @white;
       p {
         color: @textColor;
         line-height: @baseLineHeight;
       }
+    }
+    img {
+      display: inline;
+      vertical-align: middle;
     }
   }
   .carousel-control {
