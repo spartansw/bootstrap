@@ -160,13 +160,22 @@ h4 {
       width: @controlWidth;
       height: 54px;
       background: none;
+      background-repeat: no-repeat;
       border: 0;
       .border-radius(0);
       &.left {
         left: @controlSpacing;
+        background-image: url("../img/arrow_left.png");
+        &:active {
+          background-image: url("../img/arrow_left_onpress.png");
+        }
       }
       &.right {
         right: @controlSpacing;
+        background-image: url("../img/arrow_right.png");
+        &:active {
+          background-image: url("../img/arrow_right_onpress.png");
+        }
       }
     }
   }
