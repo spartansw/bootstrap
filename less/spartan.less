@@ -27,7 +27,7 @@
         line-height: @navFontSize;
         font-weight: @semiBold;
         @paddingTop: @brandImgHeight - 10px - @taglineFontSize - @navFontSize;
-        padding: @paddingTop 0 0 20px;
+        padding: @paddingTop 0 0 (@navFontSize * .7);
         > a {
           padding: 0;
         }
@@ -45,6 +45,23 @@
   }
 }
 .make-navbar(43px, 22px);
+@media (max-width: 979px) {
+  // undo bootstrap responsive stuff to make the navbar normal
+  .navbar {
+    position: fixed;
+    .container {
+      width: 724px;
+    }
+    .nav-collapse {
+      height: auto;
+      clear: none;
+      ul.nav > li {
+        float: left;
+      }
+    }
+  }
+  .make-navbar(30px, 18px);
+}
 
 .ie {
   .navbar {
