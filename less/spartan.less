@@ -226,6 +226,28 @@ h4 {
     }
   }
 }
+@media (max-width: 767px) {
+  .carousel {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    .item {
+      display: block;
+      height: auto;
+      img {
+        display: none;
+      }
+      .carousel-caption {
+        position: static;
+        width: auto;
+        height: auto;
+      }
+    }
+    .carousel-control {
+      display: none;
+    }
+  }
+}
 
 #_clients > .row-fluid {
   width: 80%;
