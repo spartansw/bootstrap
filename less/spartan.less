@@ -2,7 +2,7 @@
 @import "mixins.less";
 @import "spartan-variables.less";
 
-@semiBold: 600;
+@semiBold: 700;
 
 body {
   padding-top: @navbarHeight;
@@ -89,7 +89,7 @@ body {
   }
   .navbar {
     position: static;
-    .container {
+    .navbar-inner .container {
       padding: 0 20px;
       width: auto;
       .nav-collapse {
@@ -140,7 +140,7 @@ h2 {
   font-weight: @semiBold;
   margin: 10px 0 20px;
   padding: @vertPadding 0 @vertPadding @leftPadding;
-  width: @backgroundWidth - @leftPadding;
+  max-width: @backgroundWidth - @leftPadding;
   background-image: url("../img/section_header_bg.png");
 }
 #_projects h2 {
