@@ -206,6 +206,25 @@ h4 {
 @media (min-width: 1200px) {
   .make-carousel(250px, 100px, 30px);
 }
+@media (max-width: 979px) {
+  .carousel {
+    @captionLines: 4;
+    @captionHeight: @captionLines * @baseLineHeight;
+    width: @carouselImgWidthMax + 30px;
+    width: @carouselImgWidthMax + 2 * @carouselControlWidth + 4 * @carouselControlSpacing;
+    .item {
+      height: @carouselImgHeightMax + @captionHeight + 15px;
+      .carousel-caption {
+        width: @carouselImgWidthMax;
+        margin-left: auto;
+        margin-right: auto;
+        height: @captionHeight;
+        position: absolute;
+        bottom: 0;
+        padding: 10px 15px 5px;
+      }
+    }
+  }
 }
 
 #_clients > .row-fluid {
