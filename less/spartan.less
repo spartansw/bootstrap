@@ -4,46 +4,47 @@
 
 @semiBold: 600;
 
-.navbar {
-  @brandImgWidth:                   289px;
-  @brandImgHeight:                  92px;
-  @taglineFontSize:                 43px;
-  @navFontSize:                     22px;
+.make-navbar (@taglineFontSize, @navFontSize)  {
+  .navbar {
+    @brandImgWidth:                   289px;
+    @brandImgHeight:                  92px;
 
-  .brand {
-    margin: 0;
-    padding: 0;
-    > img {
-      height: @brandImgHeight;
-      width: @brandImgWidth;
-      // IE 8 max-width element disappearing bug
-      max-width: none;
-    }
-  }
-  ul.nav {
-    float: right;
-    margin-right: 0;
-    > li {
-      font-size: @navFontSize;
-      line-height: @navFontSize;
-      font-weight: @semiBold;
-      @paddingTop: @brandImgHeight - 10px - @taglineFontSize - @navFontSize;
-      padding: @paddingTop 0 0 20px;
-      > a {
-        padding: 0;
+    .brand {
+      margin: 0;
+      padding: 0;
+      > img {
+        height: @brandImgHeight;
+        width: @brandImgWidth;
+        // IE 8 max-width element disappearing bug
+        max-width: none;
       }
     }
-  }
-  .tagline {
-    color: @navbarBackground;
-    text-align: right;
-    font-size: @taglineFontSize;
-    line-height: @taglineFontSize;
-    font-weight: @semiBold;
-    text-shadow: -1px -1px 1px @spartanLessBlue, 1px 1px 1px @spartanBluer;
-    text-transform: uppercase;
+    ul.nav {
+      float: right;
+      margin-right: 0;
+      > li {
+        font-size: @navFontSize;
+        line-height: @navFontSize;
+        font-weight: @semiBold;
+        @paddingTop: @brandImgHeight - 10px - @taglineFontSize - @navFontSize;
+        padding: @paddingTop 0 0 20px;
+        > a {
+          padding: 0;
+        }
+      }
+    }
+    .tagline {
+      color: @navbarBackground;
+      text-align: right;
+      font-size: @taglineFontSize;
+      line-height: @taglineFontSize;
+      font-weight: @semiBold;
+      text-shadow: -1px -1px 1px @spartanLessBlue, 1px 1px 1px @spartanBluer;
+      text-transform: uppercase;
+    }
   }
 }
+.make-navbar(43px, 22px);
 
 .ie {
   .navbar {
