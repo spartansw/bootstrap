@@ -144,10 +144,11 @@ h4 {
 @carouselImgWidthMax: 555px;
 @carouselImgHeightMax: 427px;
 @carouselControlWidth: 38px;
-.make-carousel (@captionWidth, @captionY, @captionSpacing, @controlSpacing) {
+@carouselControlSpacing: 15px;
+.make-carousel (@captionWidth, @captionY, @captionSpacing) {
   .carousel {
     @carouselControlWidth: 38px;
-    width: @carouselImgWidthMax + @captionWidth + @captionSpacing + 2 * @carouselControlWidth + 4 * @controlSpacing;
+    width: @carouselImgWidthMax + @captionWidth + @captionSpacing + 2 * @carouselControlWidth + 4 * @carouselControlSpacing;
     margin-left: auto;
     margin-right: auto;
     .item {
@@ -182,14 +183,14 @@ h4 {
       border: 0;
       .border-radius(0);
       &.left {
-        left: @controlSpacing;
+        left: @carouselControlSpacing;
         background-image: url("../img/arrow_left.png");
         &:active {
           background-image: url("../img/arrow_left_onpress.png");
         }
       }
       &.right {
-        right: @controlSpacing;
+        right: @carouselControlSpacing;
         background-image: url("../img/arrow_right.png");
         &:active {
           background-image: url("../img/arrow_right_onpress.png");
@@ -198,9 +199,10 @@ h4 {
     }
   }
 }
-.make-carousel(220px, 80px, 20px, 15px);
+.make-carousel(220px, 80px, 20px);
 @media (min-width: 1200px) {
-  .make-carousel(250px, 100px, 30px, 15px);
+  .make-carousel(250px, 100px, 30px);
+}
 }
 
 #_clients > .row-fluid {
