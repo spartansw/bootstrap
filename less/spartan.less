@@ -122,7 +122,7 @@ h4 {
   font-weight: @semiBold;
 }
 
-.carousel (@captionWidth, @captionY, @captionSpacing, @controlSpacing) {
+.make-carousel (@captionWidth, @captionY, @captionSpacing, @controlSpacing) {
   .carousel {
     // actually the max after applying the negative margin to move ontram, taus
     @imgWidthMax: 555px;
@@ -180,9 +180,9 @@ h4 {
     }
   }
 }
-.carousel(220px, 80px, 20px, 15px);
+.make-carousel(220px, 80px, 20px, 15px);
 @media (min-width: 1200px) {
-  .carousel(250px, 100px, 30px, 15px);
+  .make-carousel(250px, 100px, 30px, 15px);
 }
 
 #_clients > .row-fluid {
